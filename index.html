@@ -4,19 +4,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Better Health</title>
-  <link rel="icon" href="icon.png" type="image/png">
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
   <link rel="stylesheet" href="MinhDoan_DigitalServices.css">
 </head>
 <body>
   <header>
-    <div class="logo">🥦 My Better Health</div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="calculator.html">Calculator</a>
-      <a href="database.html">Nutrition Info</a>
-      <a href="recipes.html">Recipes</a>
-      <a href="goals.html">Goals & Log</a>
-    </nav>
-  </header>
+  <nav>
+    <button class="menu-toggle">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="calculator.html">Calculator</a></li>
+      <li><a href="database.html">Nutrition Info</a></li>
+      <li><a href="recipes.html">Recipes</a></li>
+      <li><a href="goals.html">Goals & Log</a></li>
+    </ul>
+  </nav>
+  <img src="logoMyBetterHealth.png" alt="Logo" class="logo">
+  <span id="clock"></span>
+</header>
+  <main>
+    <section>
+      <h1>Welcome to My Better Health</h1>
+      <p>This website helps you calculate daily calories, explore healthy recipes, and track your goals.</p>
+    </section>
+    <section>
+      <h2>About Us</h2>
+      <p>My Better Health is a student project designed to promote healthy eating with a simple, ad-free calorie calculator.</p>
+    </section>
+
+    <section>
+      <h2>Feedback</h2>
+      <form id="contact-form">
+        <input type="text" placeholder="Name" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Message"></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+  <script src="js/clock.js"></script>
 </body>
 </html>
