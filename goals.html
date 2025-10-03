@@ -9,12 +9,29 @@
 <body>
   <header>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="calculator.html">Calculator</a>
-      <a href="database.html">Nutrition Info</a>
-      <a href="recipes.html">Recipes</a>
-      <a href="goals.html">Goals & Log</a>
+      <button class="menu-toggle">☰</button>
+      <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="calculator.html">Calculator</a></li>
+      <li><a href="database.html">Nutrition Info</a></li>
+      <li><a href="recipes.html">Recipes</a></li>
+      <li><a href="goals.html">Goals & Log</a></li>
+      </ul>
     </nav>
+    <img src="logoMyBetterHealth.png" alt="Logo" class="logo">
   </header>
+
+  <main>
+    <h1>Set Your Goal</h1>
+    <input type="number" id="goal" placeholder="Daily Calorie Goal">
+    <button id="save-goal">Save Goal</button>
+    <div id="progress-container">
+      <div id="progress-bar"></div>
+    </div>
+    <h2>Daily Log</h2>
+    <ul id="daily-log"></ul>
+  </main>
+
+  <script src="MinhDoan_Goals.js" defer></script>
 </body>
 </html>
