@@ -31,11 +31,27 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   function updateProgress() {
-    if (goal <= 0) return;
-    let percent = Math.min((totalCalories / goal) * 100, 100);
-    progressBar.style.width = percent + "%";
-    progressBar.textContent = Math.round(percent) + "%";
+  if (goal <= 0) return;
+  let percent = Math.min((totalCalories / goal) * 100, 100);
+  progressBar.style.width = percent + "%";
+  progressBar.textContent = Math.round(percent) + "%";
+
+  const celebration = document.getElementById("celebration-message");
+
+  if (percent >= 100) {
+    celebration.style.display = "block";
+  } else {
+    celebration.style.display = "none";
   }
+}
 
   updateProgress();
+  const toggleButton = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  if (toggleButton && navLinks) {
+    toggleButton.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  }
 });
