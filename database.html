@@ -1,37 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nutrition Info</title>
   <link rel="stylesheet" href="MinhDoan_DigitalServices.css">
 </head>
+
 <body>
   <header>
     <nav>
       <button class="menu-toggle">☰</button>
       <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="calculator.html">Calculator</a></li>
-      <li><a href="database.html">Nutrition Info</a></li>
-      <li><a href="recipes.html">Recipes</a></li>
-      <li><a href="goals.html">Goals & Log</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="database.html">Nutrition Info</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="goals.html">Goals & Log</a></li>
       </ul>
     </nav>
     <img src="logoMyBetterHealth.png" alt="Logo" class="logo">
   </header>
+  <p style="text-align:center; font-size:0.9rem; color:#666; margin-top:1.5rem;">
+    *All nutrition information above is for reference only and may not be completely accurate*
+  </p>
 
   <main>
     <h1>Nutrition Database</h1>
-    <input type="text" id="search-food" placeholder="Search food...">
-    <table>
-      <thead>
-        <tr><th>Food</th><th>Unit</th><th>Calories</th></tr>
-      </thead>
-      <tbody id="food-table"></tbody>
-    </table>
+    <p>Click on a food group to view calorie information.</p>
+
+    <div class="category-container">
+      <div class="category" data-category="vegetables">
+        <img src="vegetables.jpg" alt="Vegetables">
+        <p>Vegetables</p>
+      </div>
+      <div class="category" data-category="spices">
+        <img src="spices.jpg" alt="Spices">
+        <p>Spices</p>
+      </div>
+      <div class="category" data-category="meat">
+        <img src="meat.jfif" alt="Meat">
+        <p>Meat</p>
+      </div>
+      <div class="category" data-category="starch">
+        <img src="starch.jpg" alt="Starch">
+        <p>Starch</p>
+      </div>
+      <div class="category" data-category="fat">
+        <img src="fat.jpg" alt="Fat">
+        <p>Fat</p>
+      </div>
+      <div class="category" data-category="dairy">
+        <img src="dairy.jfif" alt="Dairy Products">
+        <p>Dairy Products</p>
+      </div>
+      <div class="category" data-category="fruits">
+        <img src="fruits.jfif" alt="Fruits">
+        <p>Fruits</p>
+      </div>
+      <div class="category" data-category="drinks">
+        <img src="drinks.jfif" alt="Drinks">
+        <p>Drinks</p>
+      </div>
+    </div>
+
+    <div id="food-section" style="display:none;">
+      <h2 id="category-title"></h2>
+      <input type="text" id="search-food" placeholder="Search food in this category...">
+      <table>
+        <thead>
+          <tr>
+            <th>Food</th>
+            <th>Unit</th>
+            <th>Calories</th>
+          </tr>
+        </thead>
+        <tbody id="food-table"></tbody>
+      </table>
+      <button id="back-button">← Back to Categories</button>
+    </div>
   </main>
+
 
   <script src="MinhDoan_Database.js" defer></script>
 </body>
+
 </html>
