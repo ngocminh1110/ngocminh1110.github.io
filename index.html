@@ -37,13 +37,14 @@
     <section>
       <h2>Feedback</h2>
       <form id="contact-form" action="http://hh3dlab.fi/formdemo/formhandler.php" method="POST">
-        <input type="text" name="Name" placeholder="Name" required>
-        <input type="email" name="Email" placeholder="Email" required>
-        <textarea name="Message" placeholder="Message"></textarea>
-        <button type="submit">Send</button>
-      </form>
-
-
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="Name" placeholder="Your name" required>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="Email" placeholder="you@example.com" required>
+  <label for="message">Message:</label>
+  <textarea id="message" name="Message" placeholder="Your message here..."></textarea>
+  <button type="submit">Send</button>
+</form>
     </section>
   </main>
   <script>
