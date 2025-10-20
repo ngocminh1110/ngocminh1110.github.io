@@ -87,7 +87,10 @@ form button {
 form button:hover {
   background: #45a049;
 }
-
+label {
+  position: absolute;
+  left: -9999px;
+}
 /* Calculator List */
 ul#food-list {
   list-style: none;
